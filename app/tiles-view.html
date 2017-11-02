@@ -1,0 +1,48 @@
+<div ng-controller="TilesController" >
+  <div class="sidebar">
+    <h3> Controls </h3>
+      <ul class="sidebar-nav">
+        <li>
+          <button class="btn btn-default" ng-click="chooseStart()"> Start </button>
+        </li>
+        <li>
+          <button class="btn btn-default" ng-click="chooseEnd()"> End </button>
+        </li>
+        <li>
+          <button class="btn btn-default" ng-click="buildRoute()"
+              ng-disabled="!startTile || !endTile"> Go
+          </button>
+        </li>
+        </ul>
+    <h3>Settings </h3>
+    <ul class="sidebar-nav">
+      <li>
+          <label for="colorA">Color A</label>
+          <input type="color" name="colorA" ng-change="changeColor('colorA', colorA)" ng-model="colorA">
+      </li>
+      <li>
+          <label for="colorB">Color B</label>
+          <input type="color" name="colorB"  ng-change="changeColor('colorB', colorB)" ng-model="colorB">
+      </li>
+      <li>
+          <label for="colorB">Color C</label>
+          <input type="color" name="colorC" ng-change="changeColor('colorC', colorC)" ng-model="colorC">
+        </li>
+        <ul>
+</div>
+<div class="main">
+    <div ng-repeat="row in rows">
+      <div class="tile" ng-repeat="tile in tiles.slice(row * boardSize, row * boardSize + boardSize)">
+      <div class="content">
+        <div class="table">
+          <div class="table-cell unclicked" ng-click="handleClick($event)" id="t{{tile}}"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+<div class="alert alert-danger" ng-if="!success">
+  Sorry, there is no path found. Please change Start or End tiles or remove some obstacles.
+</div>
+</div>

@@ -1,0 +1,13 @@
+<div ng-controller="FinishedController" class="finished">
+<span>
+  Job ended successfully with {{steps}} steps within {{runningTime}}.
+</span>
+<button class="startOver" ng-click="startOver()"
+  ng-mouseenter="hovered(true)"
+  ng-mouseleave="hovered(false)">
+  <span>
+    <i class="fa fa-check-circle" id="checkIcon"></i>
+  </span>
+  Start Over
+</button>
+</div>

@@ -1,0 +1,12 @@
+{
+  "name": "Angular Warm Up",
+  "description": "An exercise in AngularJS",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "angular": "1.5.x",
+    "angular-route": "1.5.x",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "3.3.x"
+  }
+}
