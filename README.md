@@ -1,4 +1,8 @@
 #angularjs
+A simple game that uses:
+	angularjs
+	angular-ui-router
+	BFS algorithm
 
 # Prerequisites:
 
